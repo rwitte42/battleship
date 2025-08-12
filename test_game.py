@@ -1,10 +1,9 @@
 #!/usr/bin/env python3
 """
-Test script to demonstrate the Battleship game functionality
+Test script for Battleship game core functionality
 """
 
 from battleship import BattleshipGame, Board, Ship
-import random
 
 def test_ship_placement():
     """Test automatic ship placement"""
@@ -17,14 +16,10 @@ def test_ship_placement():
         print("✅ Ship placement successful!")
         print(f"Placed {len(board.ships)} ships:")
         for ship in board.ships:
-            print(f"  - {ship.name} (size {ship.size}) at positions {ship.positions}")
+            print(f"  - {ship.name} (size {ship.size})")
     else:
         print("❌ Ship placement failed!")
     
-    print("\nBoard layout:")
-    board.display(show_ships=True)
-    print("\nGuess board view:")
-    board.display_guess_board()
     return success
 
 def test_shot_mechanics():
@@ -46,11 +41,6 @@ def test_shot_mechanics():
     # Test a miss
     hit, ship_hit = board.receive_shot(5, 5)
     print(f"Shot at (5,5): {'Hit!' if hit else 'Miss'}")
-    
-    print("\nBoard after shots:")
-    board.display(show_ships=True)
-    print("\nGuess board view after shots:")
-    board.display_guess_board()
     
     return True
 

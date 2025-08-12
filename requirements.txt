@@ -1,3 +1,3 @@
-# Battleship Game Dependencies
+# Battleship Game
 # No external dependencies required for CLI version
-# Future GUI/web dependencies can be added here 
+# Built with Python 3.6+ 
